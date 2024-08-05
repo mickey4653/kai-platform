@@ -2,8 +2,7 @@ const styles = {
   actionButtonGridProps: {
     container: true,
     item: true,
-    justifyContent: 'flex-start',
-    alignItems: 'center',
+    justifyContent: 'center',
   },
 
   actionButtonProps: {
@@ -11,20 +10,15 @@ const styles = {
     sx: (theme) => ({
       borderRadius: '5px',
       height: 'auto',
-      borderColor: theme.palette.Background.purple3,
-      // border: '5px solid',
+      border: `2px solid ${theme.palette.Background.purple3}`,
       background: theme.palette.Common.White['100p'],
       color: theme.palette.Background.purple3,
       textTransform: 'none',
-      // theme.palette.Common.White['100p']
-      // theme.palette.Background.purple3
       ':hover': {
-        backgroundColor: theme.palette.Background.gradient.basicPurple, // Modify hover background color as needed
+        backgroundColor: theme.palette.Background.gradient.basicPurple,
         borderColor: theme.palette.Background.purple3,
         color: theme.palette.Common.White['100p'],
       },
-      ml: { laptop: -3, desktop: -2, desktopMedium: -4.5 },
-      mr: { laptop: -2, desktop: -1, desktopMedium: -3 },
     }),
   },
 
