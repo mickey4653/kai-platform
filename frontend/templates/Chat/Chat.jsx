@@ -75,7 +75,6 @@ const ChatInterface = () => {
   const chatMessages = currentSession?.messages;
   const showNewMessageIndicator = !fullyScrolled && streamingDone;
 
-
   const startConversation = async (message) => {
     dispatch(
       setMessages({
@@ -346,8 +345,6 @@ const ChatInterface = () => {
     );
   };
 
-
-  
   const handleDiscoveryButtonClick = () => {
     setTimeout(() => {
       router.push(ROUTES.DISCOVERY);
@@ -355,9 +352,7 @@ const ChatInterface = () => {
   };
 
   const renderDiscoveryButton = () => {
-    return (
-    <DiscoveryButton onClick={handleDiscoveryButtonClick} />
-    );
+    return <DiscoveryButton onClick={handleDiscoveryButtonClick} />;
   };
 
   const renderBottomChatContent = () => {
