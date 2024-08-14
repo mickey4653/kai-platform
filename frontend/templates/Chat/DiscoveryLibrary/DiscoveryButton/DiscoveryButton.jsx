@@ -9,7 +9,6 @@ import styles from './styles';
 
 const DiscoveryButton = (props) => {
   const { onClick } = props;
-  const theme = useTheme();
   return (
     <Grid {...styles.actionButtonGridProps}>
       <Button

@@ -53,7 +53,6 @@ import sendMessage from '@/services/chatbot/sendMessage';
 const ChatInterface = () => {
   const messagesContainerRef = useRef();
   const router = useRouter();
-
   const dispatch = useDispatch();
   const {
     more,
@@ -75,7 +74,7 @@ const ChatInterface = () => {
   const currentSession = chat;
   const chatMessages = currentSession?.messages;
   const showNewMessageIndicator = !fullyScrolled && streamingDone;
-  const [customPrompts, setCustomPrompts] = useState([]);
+
 
   const startConversation = async (message) => {
     dispatch(
@@ -347,8 +346,18 @@ const ChatInterface = () => {
     );
   };
 
+
+  
+  const handleDiscoveryButtonClick = () => {
+    setTimeout(() => {
+      router.push(ROUTES.DISCOVERY);
+    }, 300); // Adjust delay to match animation duration
+  };
+
   const renderDiscoveryButton = () => {
-    return <DiscoveryButton onClick={() => router.push(ROUTES.DISCOVERY)} />;
+    return (
+    <DiscoveryButton onClick={handleDiscoveryButtonClick} />
+    );
   };
 
   const renderBottomChatContent = () => {
