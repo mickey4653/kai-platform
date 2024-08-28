@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 import { Grid, useMediaQuery } from '@mui/material';
 import Head from 'next/head';

@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { Alert, Snackbar } from '@mui/material';
 
 import ALERT_COLORS from '@/constants/notification';

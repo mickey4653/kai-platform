@@ -17,6 +17,7 @@
     "lint:fix": "cd frontend && npm run lint:fix && cd ../functions && npm run lint:fix"
   },
   "devDependencies": {
+    "@playwright/test": "^1.46.0",
     "firebase-tools": "^9.10.0"
   }
 }
