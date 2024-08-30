@@ -1,6 +1,8 @@
-import React from "react";
-import { Grid, Typography, Button } from "@mui/material";
-import styles from "./styles";
+import React from 'react';
+
+import { Button, Grid, Typography } from '@mui/material';
+
+import styles from './styles';
 
 const WelcomeScreen = () => {
   return (
@@ -9,7 +11,7 @@ const WelcomeScreen = () => {
         Welcome to <span {...styles.welcomeKaiTextProps}>Kai</span> 👋
       </Typography>
       <Typography {...styles.welcomeScreenSubtitleProps}>
-        Let's Get Started
+        Let&apos;s Get Started
       </Typography>
       <Button {...styles.welcomeScreenButtonProps}>Start Here!</Button>
     </Grid>
