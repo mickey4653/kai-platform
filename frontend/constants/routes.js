@@ -10,6 +10,7 @@ const ROUTES = {
   CHAT: '/chat',
   DISCOVERY: '/discovery',
   HISTORY: '/history',
+  PROFILE: '/profile',
 };
 
 export default ROUTES;
