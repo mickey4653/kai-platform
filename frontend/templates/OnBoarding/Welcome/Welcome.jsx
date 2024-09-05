@@ -4,9 +4,9 @@ import { Button, Grid, Typography } from '@mui/material';
 
 import { useRouter } from 'next/router';
 
-import ProgressBar from '@/templates/OnBoarding/ProgressBar/ProgressBAr';
-
 import ROUTES from '@/constants/routes';
+
+import ProgressBar from '../ProgressBar';
 
 import styles from './styles';
 

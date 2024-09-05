@@ -28,6 +28,7 @@ const ProgressBar = (props) => {
                 {...styles.progressBarCircleProps}
                 sx={{
                   backgroundColor: index < activeStep ? '#6b63ff' : '#444',
+                  borderColor: index === activeStep ? '#6b63ff' : '#fff',
                 }}
               >
                 {index < activeStep && <span>&#x2714;</span>}
@@ -50,7 +51,7 @@ const ProgressBar = (props) => {
 
         {/* Expandable/Collapsible Section */}
         <Collapse in={expanded} timeout="auto" unmountOnExit>
-          <Grid direction="column" {...styles.collapseGridProps}>
+          <Grid {...styles.collapseGridProps}>
             {steps.map((step, index) => (
               <React.Fragment key={index}>
                 <Grid
@@ -58,18 +59,24 @@ const ProgressBar = (props) => {
                   {...styles.stepsGridProps}
                   sx={{
                     backgroundColor:
-                      index === activeStep ? '#33334d' : 'transparent',
+                      index === activeStep ? '#181A20' : 'transparent',
+                    '&:hover': {
+                      backgroundColor: '#33334d',
+                    },
+
+                    //   border: index === activeStep ? "2px solid #6b63ff": "2px solid #6b63ff",
                   }}
                 >
                   <Grid
                     {...styles.stepProps}
                     sx={{
-                      backgroundColor: index === activeStep ? '#444' : '#555',
-                      borderColor: index === activeStep ? '#6b63ff' : '#555',
+                      backgroundColor:
+                        index === activeStep ? '#444' : '#6b63ff',
+                      borderColor: index !== activeStep ? '#fff' : '#6b63ff',
                     }}
                   >
                     {index < activeStep && (
-                      <span style={{ color: '#6b63ff' }}>✔️</span>
+                      <span {...styles.tickProps}>&#x2714;</span>
                     )}
                   </Grid>
                   {step}
@@ -85,5 +92,4 @@ const ProgressBar = (props) => {
     </Grid>
   );
 };
-
 export default ProgressBar;

@@ -43,60 +43,6 @@ const styles = {
       textTransform: 'capitalize',
     },
   },
-
-  // stepProps:{},
-  progressBarGridProps: {
-    container: true,
-    item: true,
-    justifyContent: 'center',
-    marginTop: 10,
-
-    width: '100%',
-    height: '10px',
-    marginBottom: '1rem',
-  },
-  stepperProps: {
-    '& .MuiStepConnector-root': {
-      top: 10,
-      left: 'calc(-50% + 16px)',
-      right: 'calc(50% + 16px)',
-      '& .MuiStepConnector-line': {
-        borderColor: '#616161',
-        borderWidth: '5px',
-      },
-    },
-    '& .MuiStepIcon-root': {
-      color: '#333333',
-      width: '24px', // Adjust width as needed
-      height: '24px', // Adjust height as needed
-      borderRadius: '50%', // Make sure the step icon has rounded shape
-      border: '1px solid #7B61FF', // Add border to visualize the step icon
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      '& .MuiStepIcon-text': {
-        display: 'none', // Hides the numbers/text inside the step icon
-      },
-    },
-    '& .MuiStepLabel-root': {
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-    },
-    '& .MuiStepLabel-label': {
-      display: 'none', // Ensure the label text is hidden
-    },
-    '& .MuiStepper-root': {
-      background: 'transparent',
-      width: '100%',
-      marginBottom: '1rem',
-    },
-  },
-
-  dropDownGridProps: {
-    border: '1px solid #D7D7D7',
-  },
-  dropDownIconProps: {},
 };
 
 export default styles;
