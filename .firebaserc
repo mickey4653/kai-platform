@@ -1,13 +1,12 @@
 {
   "projects": {
-    "default": "kai-ai-f63c8",
-    "kai-app": "kai-platform-b53aa"
+    "default": "marvel-onboarding"
   },
   "targets": {
-    "kai-ai-f63c8": {
+    "marvel-onboarding": {
       "hosting": {
         "next": [
-          "kai-ai-f63c8"
+          "marvel-onboarding"
         ]
       }
     }

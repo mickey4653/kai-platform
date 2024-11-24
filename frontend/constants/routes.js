@@ -11,6 +11,7 @@ const ROUTES = {
   DISCOVERY: '/discovery',
   HISTORY: '/history',
   PROFILE: '/profile',
+  ONBOARDINGCOMPLETE: '/onboarding-complete',
 };
 
 export default ROUTES;

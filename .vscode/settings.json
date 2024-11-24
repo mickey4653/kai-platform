@@ -3,5 +3,5 @@
     { "pattern": "./functions/*" },
     { "pattern": "./frontend/*" }
   ],
-  "Codegeex.Chat.LanguagePreference": "English"
+  "Codegeex.Chat.LanguagePreference": "English",
 }
