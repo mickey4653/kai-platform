@@ -4,6 +4,8 @@ import CheckRoundedIcon from '@mui/icons-material/CheckRounded';
 import { Box, Button, Grid, Typography } from '@mui/material';
 import { useRouter } from 'next/router';
 
+import CheckMark from '@/assets/svg/CheckMark.svg';
+
 import ROUTES from '../../../constants/routes';
 
 import styles from './styles';
@@ -18,20 +20,8 @@ const CompletedScreen = () => {
   return (
     <>
       <Grid {...styles.completeScreenGrid1Props}>
-        <Box
-          sx={{
-            width: 80,
-            height: 80,
-            borderRadius: 50,
-            bgcolor: 'primary.main',
-            border: 5,
-            borderColor: '#D9D9D9',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          <CheckRoundedIcon sx={{ color: 'white', fontSize: 60 }} />
+        <Box {...styles.completeScreenCheckMarkIconProps}>
+          <CheckMark />
         </Box>
       </Grid>
 

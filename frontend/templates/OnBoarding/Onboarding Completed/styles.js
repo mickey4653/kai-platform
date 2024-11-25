@@ -20,7 +20,7 @@ const styles = {
 
   completeScreenTitleProps: {
     fontFamily: 'Satoshi Bold',
-    fontSize: '36px',
+    fontSize: '32px',
     color: (theme) => theme.palette.Common.White['100p'],
   },
 
@@ -30,10 +30,20 @@ const styles = {
     color: (theme) => theme.palette.Common.White['100p'],
   },
 
+  completeScreenCheckMarkIconProps: {
+    borderRadius: 50,
+    backgroundColor: '#D9D9D9',
+    border: 5,
+    borderColor: '#D9D9D9',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
   completeScreenButtonProps: {
     sx: {
       width: '22%',
-      backgroundColor: '#7B61FF',
+      backgroundColor: '#8653FF',
       color: '#fff',
       padding: '0.75rem 2rem',
       borderRadius: '20px',
