@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import {
   ArrowDownwardOutlined,
@@ -16,15 +16,20 @@ import {
 } from '@mui/material';
 import { collection, onSnapshot, query, where } from 'firebase/firestore';
 
+import { useRouter } from 'next/router';
 import { useDispatch, useSelector } from 'react-redux';
 
 import NavigationIcon from '@/assets/svg/Navigation.svg';
 
 import { MESSAGE_ROLE, MESSAGE_TYPES } from '@/constants/bots';
 
+import ROUTES from '@/constants/routes';
+
 import CenterChatContentNoMessages from './CenterChatContentNoMessages';
 import ChatSpinner from './ChatSpinner';
+import DiscoveryButton from './DiscoveryLibrary/DiscoveryButton';
 import Message from './Message';
+import QuickActionButton from './QuickActionButton';
 import styles from './styles';
 
 import {
@@ -47,7 +52,7 @@ import sendMessage from '@/services/chatbot/sendMessage';
 
 const ChatInterface = () => {
   const messagesContainerRef = useRef();
-
+  const router = useRouter();
   const dispatch = useDispatch();
   const {
     more,
@@ -330,6 +335,26 @@ const ChatInterface = () => {
     );
   };
 
+  const renderQuickAction = () => {
+    return (
+      <InputAdornment position="start">
+        <Grid {...styles.bottomChatContent.bottomChatContentGridProps}>
+          <QuickActionButton defaultText="Actions" />
+        </Grid>
+      </InputAdornment>
+    );
+  };
+
+  const handleDiscoveryButtonClick = () => {
+    setTimeout(() => {
+      router.push(ROUTES.DISCOVERY);
+    }, 300); // Adjust delay to match animation duration
+  };
+
+  const renderDiscoveryButton = () => {
+    return <DiscoveryButton onClick={handleDiscoveryButtonClick} />;
+  };
+
   const renderBottomChatContent = () => {
     if (!openSettingsChat && !infoChatOpened)
       return (
@@ -344,6 +369,7 @@ const ChatInterface = () => {
               disabled={!!error}
               focused={false}
               {...styles.bottomChatContent.chatInputProps(
+                renderQuickAction,
                 renderSendIcon,
                 !!error,
                 input
@@ -358,6 +384,7 @@ const ChatInterface = () => {
 
   return (
     <Grid {...styles.mainGridProps}>
+      {renderDiscoveryButton()}
       {renderMoreChat()}
       {renderCenterChatContent()}
       {renderCenterChatContentNoMessages()}

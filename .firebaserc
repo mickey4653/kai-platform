@@ -1,15 +1,16 @@
 {
   "projects": {
-    "default": "kai-ai-f63c8"
+    "default": "marvel-onboarding"
   },
   "targets": {
-    "kai-ai-f63c8": {
+    "marvel-onboarding": {
       "hosting": {
         "next": [
-          "kai-ai-f63c8"
+          "marvel-onboarding"
         ]
       }
     }
   },
-  "etags": {}
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }

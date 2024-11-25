@@ -8,7 +8,10 @@ const ROUTES = {
   PASSWORD_RESET: '/password-reset',
   REDIRECT: '/redirect',
   CHAT: '/chat',
+  DISCOVERY: '/discovery',
   HISTORY: '/history',
+  PROFILE: '/profile',
+  ONBOARDINGCOMPLETE: '/onboarding-complete',
 };
 
 export default ROUTES;

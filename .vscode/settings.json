@@ -2,5 +2,6 @@
   "eslint.workingDirectories": [
     { "pattern": "./functions/*" },
     { "pattern": "./frontend/*" }
-  ]
+  ],
+  "Codegeex.Chat.LanguagePreference": "English",
 }
