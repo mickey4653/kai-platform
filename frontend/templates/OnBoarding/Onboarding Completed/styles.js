@@ -18,14 +18,6 @@ const styles = {
     alignItems: 'center',
   },
 
-  completeScreenMainGridProps: {
-    backgroundColor: {
-      '#4A426A': '100%',
-      '#201E2B': '100%',
-      '#000000': '100%',
-    },
-  },
-
   completeScreenTitleProps: {
     fontFamily: 'Satoshi Bold',
     fontSize: '36px',
@@ -35,14 +27,6 @@ const styles = {
   completeScreenSubtitleProps: {
     fontFamily: 'Satoshi Bold',
     fontSize: '18px',
-    color: (theme) => theme.palette.Common.White['100p'],
-  },
-
-  completedKaiTextProps: {
-    fontFamily: 'Satoshi Bold',
-    fontSize: '36px',
-    // sx: {},
-    // span: { color: (theme) => theme.palette.Background.purple },
     color: (theme) => theme.palette.Common.White['100p'],
   },
 

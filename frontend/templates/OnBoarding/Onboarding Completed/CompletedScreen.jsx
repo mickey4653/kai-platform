@@ -16,7 +16,7 @@ const CompletedScreen = () => {
   };
 
   return (
-    <Grid {...styles.completeScreenMainGridProps}>
+    <>
       <Grid {...styles.completeScreenGrid1Props}>
         <Box
           sx={{
@@ -53,7 +53,7 @@ const CompletedScreen = () => {
           Continue
         </Button>
       </Grid>
-    </Grid>
+    </>
   );
 };
 
