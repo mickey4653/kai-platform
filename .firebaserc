@@ -1,17 +1,15 @@
 {
   "projects": {
-    "default": "kai-ai-f63c8",
-    "kai-app": "kai-platform-b53aa"
+     "default": "radical-8e121"
   },
   "targets": {
-    "kai-ai-f63c8": {
+    "radical-8e121": {
       "hosting": {
         "next": [
-          "kai-ai-f63c8"
+          "radical-8e121"
         ]
       }
     }
   },
-  "etags": {},
-  "dataconnectEmulatorConfig": {}
+  "etags": {}
 }

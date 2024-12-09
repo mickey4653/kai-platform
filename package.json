@@ -18,5 +18,11 @@
   },
   "devDependencies": {
     "firebase-tools": "^9.10.0"
+  },
+  "dependencies": {
+    "next": "^15.0.3",
+    "next-transpile-modules": "^10.0.1",
+    "package.json": "^2.0.1",
+    "react-syntax-highlighter": "^15.6.1"
   }
 }
