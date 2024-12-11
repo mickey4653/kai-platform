@@ -1,15 +1,16 @@
 {
   "projects": {
-     "default": "radical-8e121"
+    "default": "marvel-onboarding"
   },
   "targets": {
-    "radical-8e121": {
+    "marvel-onboarding": {
       "hosting": {
         "next": [
-          "radical-8e121"
+          "marvel-onboarding"
         ]
       }
     }
   },
-  "etags": {}
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }
