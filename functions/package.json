@@ -24,6 +24,7 @@
     "firebase-admin": "^11.11.1",
     "firebase-functions": "^4.5.0",
     "moment": "^2.29.4",
+    "pkg.json": "^2.0.8",
     "request": "^2.88.2"
   },
   "devDependencies": {
