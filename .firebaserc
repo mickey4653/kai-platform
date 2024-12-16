@@ -1,13 +1,13 @@
 {
   "projects": {
-    "default": "kai-ai-f63c8",
+    "default": "marvel-project-a0cc2",
     "kai-app": "kai-platform-b53aa"
   },
   "targets": {
-    "kai-ai-f63c8": {
+    "marvel-project-a0cc2": {
       "hosting": {
         "next": [
-          "kai-ai-f63c8"
+          "marvel-project-a0cc2"
         ]
       }
     }

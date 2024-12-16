@@ -11,6 +11,8 @@ const ROUTES = {
   DISCOVERY: '/discovery',
   HISTORY: '/history',
   PROFILE: '/profile',
+
+  SYSTEMCONFIGURATIONS: '/SystemComfigurations',
 };
 
 export default ROUTES;

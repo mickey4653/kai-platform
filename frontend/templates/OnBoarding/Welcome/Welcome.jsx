@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import { Button, Grid, Typography } from '@mui/material';
+import { Button, Grid, Typography } from "@mui/material";
 
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 
-import ROUTES from '@/constants/routes';
+import ROUTES from "@/constants/routes";
 
-import ProgressBar from '../ProgressBar';
+import ProgressBar from "../ProgressBar";
 
-import styles from './styles';
+import styles from "./styles";
+import ThemeWrapper from "../ThemeWrapper";
+import { darkTheme, lightTheme } from "../Theme";
 
 const WelcomeScreen = () => {
   const router = useRouter();
@@ -16,10 +18,10 @@ const WelcomeScreen = () => {
   const [expanded, setExpanded] = useState(false); // State for expand/collapse
 
   const steps = [
-    'Welcome',
-    'Profile Setup',
-    'System Configurations',
-    'Final Steps',
+    "Welcome",
+    "Profile Setup",
+    "System Configurations",
+    "Final Steps",
   ];
 
   const handleToggleExpand = () => {
@@ -52,7 +54,7 @@ const WelcomeScreen = () => {
 
       <Grid {...styles.welcomeScreenGridProps}>
         <Typography {...styles.welcomeScreenTitleProps}>
-          Welcome to <span style={{ color: '#7B61FF' }}>Kai</span> 👋
+          Welcome to <span style={{ color: "#7B61FF" }}>Kai</span> 👋
         </Typography>
         <Typography {...styles.welcomeScreenSubtitleProps}>
           Let&apos;s Get Started

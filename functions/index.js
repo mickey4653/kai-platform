@@ -6,6 +6,7 @@ admin.initializeApp();
 const userController = require('./controllers/userController');
 const kaiAIController = require('./controllers/kaiAIController');
 const { seedDatabase } = require('./cloud_db_seed');
+const sysConfigController = require('./controllers/sysConfigController');
 
 seedDatabase();
 
@@ -25,4 +26,8 @@ module.exports = {
 
   /* Migration Scripts - For running  */
   ...migrationScripts,
+
+  /* sysconfig */
+  updateNotificationPreference:
+    sysConfigController.updateNotificationPreference,
 };
