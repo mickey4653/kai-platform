@@ -1,14 +1,15 @@
-import { functions } from "@/redux/store";
-import { httpsCallable } from "firebase/functions";
+import { httpsCallable } from 'firebase/functions';
+
+import { functions } from '@/redux/store';
 
 const updateNotificationPreference = async (preference) => {
   try {
-    console.log("call UNPF start");
+    console.log('call UNPF start');
     const updateNotificationPreferenceFunction = httpsCallable(
       functions,
-      "updateNotificationPreference"
+      'updateNotificationPreference'
     );
-    console.log("call UNPF end");
+    console.log('call UNPF end');
     return await updateNotificationPreferenceFunction({
       emailNotifications: preference.emailNotifications,
       pushNotifications: preference.pushNotifications,
@@ -16,9 +17,9 @@ const updateNotificationPreference = async (preference) => {
       theme: preference.isDarkMode,
     });
   } catch (error) {
-    console.log("catch an error in service");
+    console.log('catch an error in service');
 
-    throw new Error("failed to call updateNotificationPreference");
+    throw new Error('failed to call updateNotificationPreference');
   }
 };
 

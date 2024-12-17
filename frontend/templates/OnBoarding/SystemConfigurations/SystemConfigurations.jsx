@@ -1,20 +1,18 @@
 import React, { useState } from 'react';
-import {
-  Box,
-  Typography,
-  Switch,
-  Slider,
-  Button,
-  createTheme,
-  ThemeProvider,
-} from '@mui/material';
+
+import { Box, Button, Switch, Typography } from '@mui/material';
 import { useRouter } from 'next/router';
+
 import ROUTES from '@/constants/routes';
-import styles from './styles';
+
 import ProgressBar from '../ProgressBar';
-import updateNotificationPreference from '@/services/notificationPreferences';
-import ThemeWrapper from '../ThemeWrapper';
+
 import { darkTheme, lightTheme } from '../Theme';
+import ThemeWrapper from '../ThemeWrapper';
+
+import styles from './styles';
+
+import updateNotificationPreference from '@/services/notificationPreferences';
 
 const SystemConfigurationPage = () => {
   const router = useRouter();
@@ -91,7 +89,7 @@ const SystemConfigurationPage = () => {
 
     setActiveStep(3);
     setTimeout(() => {
-      //todo : replace the PROFILE with next page name
+      // todo : replace the PROFILE with next page name
       router.push(ROUTES.PROFILE);
     }, 300); // Adjust delay to match animation duration
   };
@@ -108,13 +106,13 @@ const SystemConfigurationPage = () => {
     >
       {/* the main box of notification options */}
       <Box
-        display='flex'
-        flexDirection='column'
-        alignItems='center'
-        justifyContent='flex-start'
-        height='100vh'
-        bgcolor='background.default'
-        color='text.primary'
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="flex-start"
+        height="100vh"
+        bgcolor="background.default"
+        color="text.primary"
       >
         <Box margin={20}>
           <ProgressBar
@@ -126,23 +124,24 @@ const SystemConfigurationPage = () => {
           />
         </Box>
         {/* the title */}
-        <Typography variant='h4' gutterBottom>
+        <Typography variant="h4" gutterBottom>
           System Configurations
         </Typography>
         {/* the subtitle */}
-        <Typography variant='body1' gutterBottom>
+        <Typography variant="body1" gutterBottom>
           We need some permissions to get you started
         </Typography>
         {/* first 4 options */}
-        <Box width='100%' maxWidth={400} mt={4}>
-          {options.map((option) => (
+        <Box width="100%" maxWidth={400} mt={4}>
+          {options.map((option, index) => (
             <Box
-              display='flex'
-              justifyContent='space-between'
-              alignItems='center'
+              key={option.id || index}
+              display="flex"
+              justifyContent="space-between"
+              alignItems="center"
               mb={2}
             >
-              <Typography variant='body1'>{option.optionContent}</Typography>
+              <Typography variant="body1">{option.optionContent}</Typography>
               <Switch
                 checked={option.optionBoolean}
                 onChange={option.handleChange}
@@ -161,17 +160,17 @@ const SystemConfigurationPage = () => {
           ))}
           {/* the last option: theme */}
           <Box
-            display='flex'
-            justifyContent='space-between'
-            alignItems='center'
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center"
             mb={2}
           >
-            <Typography variant='body1'>{'Theme Selection'}</Typography>
+            <Typography variant="body1">Theme Selection</Typography>
             <Typography
-              variant='body1'
-              position='absolute'
+              variant="body1"
+              position="absolute"
               left={isDarkMode ? '80%' : '20%'}
-              top='-20%'
+              top="-20%"
               color={isDarkMode ? 'text.secondary' : 'text.primary'}
               sx={{ transition: 'left 0.2s' }}
             >
@@ -191,12 +190,11 @@ const SystemConfigurationPage = () => {
                     right: isDarkMode ? '12px' : '50%',
                     left: isDarkMode ? 'unset' : '12px',
                     transform: isDarkMode
-                      ? 'translateX(-1050px)'
-                      : 'translateX(50px)',
+                      ? 'translateX(-1050px) translateY(-50%)'
+                      : 'translateX(50px) translateY(-50%)',
                     color: isDarkMode ? 'white' : 'black',
                     fontSize: '10px',
                     top: '50%',
-                    transform: 'translateY(-50%)',
                     whiteSpace: 'nowrap',
                   },
                 },
@@ -210,7 +208,7 @@ const SystemConfigurationPage = () => {
           </Box>
 
           <Button
-            variant='contained'
+            variant="contained"
             {...styles.SystemConfigurationsFinishButton}
             onClick={handleFinishButtonClick}
           >

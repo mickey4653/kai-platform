@@ -36,4 +36,9 @@ module.exports = {
     camelcase: 0,
     indent: 0,
   },
+  'sort-imports': ['error', {
+    'ignoreCase': false,
+    'ignoreMemberSort': false,
+    'memberSyntaxSortOrder': ['none', 'all', 'multiple', 'single'],
+}],
 };

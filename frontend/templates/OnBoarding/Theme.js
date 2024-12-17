@@ -1,41 +1,41 @@
-import { createTheme } from "@mui/material";
+import { createTheme } from '@mui/material';
 
 const darkTheme = createTheme({
   palette: {
-    mode: "dark",
+    mode: 'dark',
     primary: {
-      main: "#90caf9",
+      main: '#90caf9',
     },
     secondary: {
-      main: "#f48fb1",
+      main: '#f48fb1',
     },
     background: {
-      default: "#121212",
-      paper: "#1c1c1c",
+      default: '#121212',
+      paper: '#1c1c1c',
     },
     text: {
-      primary: "#ffffff",
-      secondary: "#b0bec5",
+      primary: '#ffffff',
+      secondary: '#b0bec5',
     },
   },
 });
 
 const lightTheme = createTheme({
   palette: {
-    mode: "light",
+    mode: 'light',
     primary: {
-      main: "#1976d2",
+      main: '#1976d2',
     },
     secondary: {
-      main: "#dc004e",
+      main: '#dc004e',
     },
     background: {
-      default: "#ffffff",
-      paper: "#f5f5f5",
+      default: '#ffffff',
+      paper: '#f5f5f5',
     },
     text: {
-      primary: "#000000",
-      secondary: "#757575",
+      primary: '#000000',
+      secondary: '#757575',
     },
   },
 });
