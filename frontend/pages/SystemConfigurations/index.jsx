@@ -4,9 +4,4 @@ import SystemConfigurations from '@/templates/OnBoarding/SystemConfigurations/Sy
 const KaiChat = () => {
   return <SystemConfigurations />;
 };
-
-// KaiChat.getLayout = function getLayout(page) {
-//   return <MainAppLayout>{page}</MainAppLayout>;
-// };
-
 export default KaiChat;

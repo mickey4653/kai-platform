@@ -3,9 +3,6 @@ const styles = {
     container: true,
     item: true,
     mobileSmall: true,
-    // rowGap: { laptop: 5, desktop: 4 },
-    // width:'auto',
-    // justifyContent: "space-between",
   },
 
   discoveryGridProps: {
@@ -13,10 +10,7 @@ const styles = {
     item: true,
     mobileSmall: true,
     rowGap: { laptop: 2, desktop: 4 },
-    // px: { laptop: 1, desktop: 1.5, desktopMedium: 2 },
     flexDirection: 'column',
-    //    sx: {
-    //   background: 'rgba(24, 26, 32, 0.05)',
     transform: {
       laptop: 'scale(0.5)',
       desktop: 'scale(0.7)',
@@ -25,11 +19,6 @@ const styles = {
     // },
     width: { desktopMedium: '37%', desktop: '37.5%', laptop: '50%' },
 
-    // height: { desktopMedium: '34.5%', desktop: '34.5%', laptop: '34.5%' , mobile: '36.5%' },
-
-    // height: '100%',
-    // ml: { laptop: -5, desktop: -4, desktopMedium: -28 },
-    // mt: { laptop: -10.5, desktop: -6, desktopMedium: -5  },
     sx: (theme) => ({
       borderRadius: '15px',
       borderColor: '#B791FF',

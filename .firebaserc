@@ -1,13 +1,12 @@
 {
   "projects": {
-    "default": "marvel-project-a0cc2",
-    "kai-app": "kai-platform-b53aa"
+    "default": "marvel-onboarding"
   },
   "targets": {
-    "marvel-project-a0cc2": {
+    "marvel-onboarding": {
       "hosting": {
         "next": [
-          "marvel-project-a0cc2"
+          "marvel-onboarding"
         ]
       }
     }

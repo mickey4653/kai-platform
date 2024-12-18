@@ -4,12 +4,10 @@ import { functions } from '@/redux/store';
 
 const updateNotificationPreference = async (preference) => {
   try {
-    console.log('call UNPF start');
     const updateNotificationPreferenceFunction = httpsCallable(
       functions,
       'updateNotificationPreference'
     );
-    console.log('call UNPF end');
     return await updateNotificationPreferenceFunction({
       emailNotifications: preference.emailNotifications,
       pushNotifications: preference.pushNotifications,
