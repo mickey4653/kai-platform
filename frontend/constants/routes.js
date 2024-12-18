@@ -11,8 +11,8 @@ const ROUTES = {
   DISCOVERY: '/discovery',
   HISTORY: '/history',
   PROFILE: '/profile',
-
   SYSTEMCONFIGURATIONS: '/SystemComfigurations',
+  ONBOARDINGCOMPLETE: '/onboarding-complete',
 };
 
 export default ROUTES;
