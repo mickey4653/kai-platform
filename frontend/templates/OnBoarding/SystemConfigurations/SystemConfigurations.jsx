@@ -73,18 +73,13 @@ const SystemConfigurationPage = () => {
     event.preventDefault();
 
     try {
-      // console.log('Finish button clicked');
       await updateNotificationPreference({
         emailNotifications,
         pushNotifications,
         reminders,
         isDarkMode,
       });
-      // Handle success
-      console.log('Notification preference updated successfully');
     } catch (error) {
-      // Handle error
-      console.error('Error updating notification preference:', error);
     }
 
     setActiveStep(3);
